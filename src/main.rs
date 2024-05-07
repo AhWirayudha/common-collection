@@ -1,3 +1,11 @@
+// enum different type can be use as vector, since vector only store same type which is enum type
+#[derive(Debug)]
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
 fn main() {
     // vector, only store value with same type Vec<T> generic
     let v: Vec<i32> = Vec::new();
@@ -72,4 +80,13 @@ fn main() {
         *i += 50; // add 50 to each element, use * to dereference the value
     }
     println!("{:?}", v);
+
+    // vector with enum type
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
+
+    println!("{:?}", row);
 }
