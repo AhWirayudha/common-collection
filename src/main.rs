@@ -57,8 +57,19 @@ fn main() {
 
     v.push(6); // change with push
 
-    println!("{:?}", v) // [1, 2, 3, 4, 5, 6]
+    println!("{:?}", v); // [1, 2, 3, 4, 5, 6]
 
     // println!("The first element is: {first}"); // error because you call it here after mutable change
 
+    // iterating over value in vector
+    let v = vec![100, 32, 57];
+    for i in &v {
+        println!("{i}");
+    }
+    // mutable vector change all element
+    let mut v = vec![100, 32, 57];
+    for i in &mut v {
+        *i += 50; // add 50 to each element, use * to dereference the value
+    }
+    println!("{:?}", v);
 }
