@@ -13,4 +13,15 @@ fn main() {
     let v = vec![1, 2, 3];
 
     println!("{:?}", v);
+
+    // update vector, need mutable
+    let mut v = Vec::new();
+
+    v.push(2);
+    v.push(6);
+    v.push(7);
+    v.push(8);
+    // v.push("Test"); // cannot push different type
+
+    println!("{:?}", v);
 }
