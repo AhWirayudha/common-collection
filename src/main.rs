@@ -229,4 +229,10 @@ fn main() {
     // field_name and field_value are invalid at this point, try using them and
     // see what compiler error you get!
     println!("{:?}", map);
+
+    // overwriting a value
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Blue"), 25); // same key different value
+
+    println!("{:?}", scores);
 }
