@@ -209,4 +209,14 @@ fn main() {
     scores.insert(String::from("Shapirre"), 40); // its homogenous, so the key always same type and values also same type
 
     println!("{:?}", scores); // print {Blue: 10, Shapirre: 40}
+
+    // accessing values
+    let team_name = String::from("Blue");
+    // get value by key
+    let score = scores.get(&team_name).copied().unwrap_or(0); // get and unwrap_or 0
+    println!("{score}");
+    // using for loop
+    for (key, value) in &scores {
+        println!("{key}: {value}");
+    }
 }
