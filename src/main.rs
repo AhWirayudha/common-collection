@@ -162,4 +162,26 @@ fn main() {
 
     let s = format!("{s1}-{s2}-{s3}"); // use reference, does not take ownership
     println!("{s} {s1} {s2} {s3}");
+
+    // Indexing into String
+    // internal representation
+    // String is a wrapper around Vec<u8> => UTF-8
+    let hello = String::from("Hola"); // len 4, mean 4 bytes long
+    let hello = String::from("Здравствуйте"); // len 24, mean 24 bytes long
+    let hello = String::from("你好"); // len 6, mean 6 bytes long
+
+    let hello = "Здравствуйте";
+    // let answer = &hello[0]; // error
+
+    // println!("{answer}");
+    
+    // slice, tricky to use
+    let hello = "Здравствуйте"; // 2 bytes per character
+
+    let s = &hello[0..4]; // Зд
+
+    println!("{s}");
+
+    // let s = &hello[0..1]; // panic
+
 }
