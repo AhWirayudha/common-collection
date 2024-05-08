@@ -1,4 +1,5 @@
 use unicode_segmentation::UnicodeSegmentation; // can handle graphemes
+use std::collections::HashMap; // std lib hash map
 
 // enum different type can be use as vector, since vector only store same type which is enum type
 #[derive(Debug)]
@@ -199,4 +200,13 @@ fn main() {
     for g in "नमस्ते".graphemes(true) {
         println!("{g}"); // print graphemes न म स् ते
     }
+
+    // HashMap
+    // create hash map
+    let mut scores = HashMap::new();
+    // use insert to populate
+    scores.insert(String::from("Blue"), 10); // String "Blue" as key and 10 as value
+    scores.insert(String::from("Shapirre"), 40); // its homogenous, so the key always same type and values also same type
+
+    println!("{:?}", scores); // print {Blue: 10, Shapirre: 40}
 }
