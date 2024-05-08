@@ -89,4 +89,43 @@ fn main() {
     ];
 
     println!("{:?}", row);
+
+    // String, from standart library (wrapper arround vector of byte)
+    // create string
+    let mut s = String::new(); // create empty string
+    // load data into string
+    let data = "initial contents";
+    let s = data.to_string();
+    println!("{s}");
+
+    // option, the method also works on a literal directly:
+    let s = "initial contents".to_string();
+    println!("{s}");
+
+    // String::from
+    let s = String::from("initial contents");
+    println!("{s}");
+
+    // String are UTF-8 encoded, all valid sample
+    let hello = String::from("السلام عليكم");
+    println!("{hello}");
+    let hello = String::from("Dobrý den");
+    println!("{hello}");
+    let hello = String::from("Hello");
+    let hello = String::from("שָׁלוֹם");
+    println!("{hello}");
+    let hello = String::from("السلام عليكم");
+    let hello = String::from("Dobrý den");
+    let hello = String::from("Hello");
+    let hello = String::from("שָׁלוֹם");
+    let hello = String::from("नमस्ते");
+    let hello = String::from("こんにちは");
+    let hello = String::from("안녕하세요");
+    let hello = String::from("你好");
+    let hello = String::from("Olá");
+    let hello = String::from("Здравствуйте");
+    let hello = String::from("Hola");
+
+
+
 }
