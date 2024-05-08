@@ -126,6 +126,20 @@ fn main() {
     let hello = String::from("Здравствуйте");
     let hello = String::from("Hola");
 
+    // Update string
+    // Appending to a String with push_str and push
+    let mut s = String::from("foo");
+    s.push_str("bar"); // using push_str
+    println!("{s}");   
 
+    let mut s1 = String::from("foo");
+    let s2 = "bar";
+    s1.push_str(s2);
+    println!("s2 is {s2}"); // push_str does not take ownership of s2
 
+    // push, method to add a single character
+    let mut s = String::from("lo");
+    s.push('l'); // push single character
+    println!("{s}");
+    
 }
