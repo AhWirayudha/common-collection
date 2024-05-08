@@ -1,3 +1,5 @@
+use unicode_segmentation::UnicodeSegmentation; // can handle graphemes
+
 // enum different type can be use as vector, since vector only store same type which is enum type
 #[derive(Debug)]
 enum SpreadsheetCell {
@@ -184,4 +186,17 @@ fn main() {
 
     // let s = &hello[0..1]; // panic
 
+    // method for iterating over String
+    for c in "नमस्ते".chars() {
+        println!("{c}"); // unicode scalar
+    }
+
+    for b in "नमस्ते".bytes() {
+        println!("{b}"); // bytes
+    }
+
+    // graphemes
+    for g in "नमस्ते".graphemes(true) {
+        println!("{g}"); // print graphemes न म स् ते
+    }
 }
