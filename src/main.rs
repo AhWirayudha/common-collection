@@ -243,4 +243,15 @@ fn main() {
     println!("{:?}", scores);
 
     // updating value based on old value
+    let text = "hello world wonderful world";
+
+    let mut map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        println!("{count} {word}");
+        *count += 1; // asterisk to dereference
+    }
+
+    println!("{:?}", map);
 }
