@@ -235,4 +235,12 @@ fn main() {
     scores.insert(String::from("Blue"), 25); // same key different value
 
     println!("{:?}", scores);
+
+    // entry, adding key and value if only does not exist
+    scores.entry(String::from("Yellow")).or_insert(50); // new key, insert
+    scores.entry(String::from("Blue")).or_insert(50); // already exist, did not insert
+
+    println!("{:?}", scores);
+
+    // updating value based on old value
 }
